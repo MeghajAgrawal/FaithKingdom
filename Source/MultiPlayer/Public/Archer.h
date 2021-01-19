@@ -6,6 +6,11 @@
 #include "GameFramework/Character.h"
 #include "Archer.generated.h"
 
+<<<<<<< Updated upstream
+=======
+class ABow;
+
+>>>>>>> Stashed changes
 UCLASS()
 class MULTIPLAYER_API AArcher : public ACharacter
 {
@@ -26,4 +31,25 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+<<<<<<< Updated upstream
 };
+=======
+private:
+	void MoveForward(float AxisValue);
+	//void LookUp(float AxisValue);
+	void MoveRight(float AxisValue);
+	//void LookRight(float AxisValue);
+	void Jump(float AxisValue);
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<ABow> BowClass;
+
+	UPROPERTY()
+	ABow* Bow;
+};
+
+
+
+
+
+>>>>>>> Stashed changes
